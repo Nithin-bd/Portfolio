@@ -1,0 +1,99 @@
+@import "../../app.scss";
+
+.contact {
+  height: 100%;
+  max-width: 1366px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      gap: 10px;
+      text-align: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
+
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .formContainer {
+    margin-top: 6%;
+    align-items: center;
+    flex: 1;
+    position: relative;
+
+    @include mobile {
+      width: 100%;
+      padding: 50px;
+    }
+
+    .phoneSvg {
+      z-index: -1;
+      stroke: #9e6324;
+      position: absolute;
+      margin: auto;
+
+      @include mobile {
+        width: 300px;
+        height: 300px;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    form {
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        z-index: 3;
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid #9e6324;
+        color: #9e6324;
+        border-radius: 5px;
+
+        @include mobile {
+          padding: 10px;
+        }
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: #9e6324;
+        cursor: pointer;
+        font-weight: 500;
+        border-radius: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../app.scss";
+
+.parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+
+  h1 {
+    font-size: 100px;
+    margin-top: -300px;
+    z-index: 4;
+
+    @include mobile {
+      font-size: 50px;
+      text-align: center;
+    }
+  }
+
+  .mountains {
+    background-image: url("/lightning_1_no_bg.png");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+
+    @include mobile {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .lightning {
+    background-image: url("/LTDJ.gif");
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    margin-top: -149px;
+    z-index: 1;
+
+    @include mobile {
+      height: 100%;
+      margin-top: unset;
+    }
+  }
+
+  // .stars {
+  //   background-image: url("/stars.png");
+  //   background-size: cover;
+  //   background-position: bottom;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   z-index: 2;
+  // }
+}
