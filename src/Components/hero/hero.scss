@@ -52,6 +52,11 @@
           color: white;
           margin-right: 10px;
           cursor: pointer;
+          z-index: 999;
+        }
+        button:hover {
+          color: black;
+          background-color: white;
         }
       }
     }
@@ -92,6 +97,7 @@
     width: 50%;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.458);
+    z-index: -1;
 
     @include mobile {
       bottom: 100px;

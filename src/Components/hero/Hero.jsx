@@ -39,6 +39,13 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="hero">
       <div className="wrapper">
@@ -51,10 +58,18 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>PLEBBY</motion.h2>
           <motion.h1 variants={textVariants}>Full-Stack Developer</motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>
+            <motion.button
+              variants={textVariants}
+              onClick={() => scrollToSection("Services")}
+            >
               See the latest work
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button
+              variants={textVariants}
+              onClick={() => scrollToSection("Contact")}
+            >
+              Contact Me
+            </motion.button>
           </motion.div>
           <motion.img
             src="/scroll.png"

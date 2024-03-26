@@ -9,10 +9,7 @@
   color: black;
   position: relative;
   z-index: 100;
-
-  @include mobile {
-    overflow-x: hidden;
-  }
+  width: 100%;
 
   .bg {
     position: fixed;
@@ -21,18 +18,19 @@
     bottom: 0;
     width: 94%;
     max-height: 100px;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.5);
     box-sizing: border-box;
+    backdrop-filter: blur(5px);
     border-radius: 50px;
-    opacity: 0.6;
     z-index: 1;
 
     @include mobile {
       top: 9px;
       left: 0px;
-      width: 81%;
+      width: 100%;
       display: flex;
       align-items: center;
+      overflow-x: hidden;
     }
 
     .links {

@@ -4,9 +4,9 @@
   height: 100px;
   margin-left: 100px;
   width: 100%;
-
   @include mobile {
     overflow: hidden;
+    margin-left: 0;
   }
 
   .wrapper {
@@ -18,9 +18,6 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    @include mobile {
-      max-width: 738px;
-    }
   }
 
   span {
